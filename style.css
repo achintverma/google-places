@@ -1,0 +1,170 @@
+
+
+       html, body{
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        width:100%;
+
+       }
+
+       #map-canvas {
+        height: 100%;
+        width:70%;
+      }
+
+      #results {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        right: 5px;
+        top: 0;
+   
+        height: 100%;
+        width: 30%;
+        padding: 5px;
+        z-index: 5;
+        
+        background: #fff;
+      }
+
+
+      h2 {
+        font-size: 22px;
+        margin: 0 0 5px 0;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        height: 70%;
+        width: 100%;
+        overflow-y: scroll;
+      }
+
+      li {
+        background-color: #f1f1f1;
+        padding: 10px;
+        overflow: hidden;
+      }
+
+      li:nth-child(odd) {
+        background-color: #fcfcfc;
+      }
+      
+      #more{
+        display: none;
+      }
+
+      .search-form{
+
+        height:25%; background-color:#eee;padding:20px;
+
+      }
+
+      .search-form > .row{
+        margin-bottom: 10px;
+      }
+
+      #places > li{
+
+        display:block;
+        position:relative;
+        height:100px;
+
+      }
+
+      #places > li > div.rest-name{
+        width:80%;
+      }
+
+      .rest-name > h5{
+        font-size: 14px;
+        font-weight: bold;
+        margin:0;
+      }
+
+      .rest-name > p{
+        font-size: 12px;
+        margin-top:10px;
+      }
+
+      #places > li > span.rating{
+
+        display:block;
+        background-color: red;
+        width:40px;
+        height:40px;
+        border-radius: 20px;
+        color:white;
+        text-align: center;
+        line-height: 40px;
+        position:absolute;
+        right:10px;
+        top:10px;
+
+      }
+
+      #placeholder-text{
+
+        text-align: center;
+
+      }
+
+      #placeholder-text h3{
+
+        margin-top: 100px; 
+        color:#666;
+        font-size: 36px;
+
+
+      }
+
+      #placeholder-text p{
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 100;
+        color:#999;
+      }
+
+
+      @media (max-width: 768px){
+
+
+          #map-canvas {
+            height: 400px;
+            width:100%;
+
+          }
+
+          #results {
+            font-family: Arial, Helvetica, sans-serif;
+                  
+            height: 600px;
+            width: 100%;
+            padding: 5px;
+           
+            background: #fff;
+            margin-top: 400px;
+          }
+
+          .search-form{
+
+              height:240px; background-color:#eee;padding:20px;
+        
+          }
+          
+          h2 {
+            font-size: 22px;
+            margin: 0 0 5px 0;
+          }
+          ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 500px;
+            width: 100%;
+            overflow-y: scroll;
+          }
+
+
+      }

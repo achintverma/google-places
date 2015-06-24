@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    
+    <title>Places Search Using Google Maps - Zenefits</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <div id="map-canvas"></div>
+    <div id="results">
+
+      <div class="search-form">
+
+        <div class="row">
+           <div class="col-sm-12">
+            <input type="text" class="form-control" placeholder="Name of the restaurant" id="keyword">
+           </div> 
+        </div> 
+
+        <div class="row">
+          <div class="col-sm-6 col-xs-12">
+              <select class="form-control" id="minprice">
+                <option value="0"selected>$</option>
+                <option value="1">$$</option>
+                <option value="2">$$$</option>
+                <option value="3">$$$$</option>
+                <option value="4" >$$$$$</option>
+              </select>
+          </div>
+
+          <div class="col-sm-6 col-xs-12">
+              <select class="form-control" id="maxprice">
+                <option value="0">$</option>
+                <option value="1">$$</option>
+                <option value="2">$$$</option>
+                <option value="3">$$$$</option>
+                <option value="4" selected>$$$$$</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="row">
+           <div class="col-sm-12">
+            <label><input type="checkbox" id="opennow"> Open Now</label>
+           </div> 
+        </div> 
+        
+        <div class="row">
+           <div class="col-sm-12">
+            <input type="button" class="btn btn-success btn-block" onclick="search();" value="Search Restaurants">
+           </div> 
+        </div> 
+      </div>
+      
+      <ul id="places">
+
+        <div id="placeholder-text">
+          <h3>Search restaurants in San Francisco.</h3>
+          <p>Enter cuisine like 'indian' or 'mexican' or a place name like 'lolo'</p>
+        </div>
+
+      </ul>
+      
+      <button id="more" class="btn btn-success btn-block">More results</button>
+
+      
+
+    </div>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>  
+  <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
