@@ -92,7 +92,10 @@ function search(){
 
 function callback(results, status, pagination) {
   if (status != google.maps.places.PlacesServiceStatus.OK) {
+    
+    placesList.innerHTML = "<center><br/><br/><br/>No results were found based on search criteria</center>";
     return;
+
   } else {
     createMarkers(results);
 
@@ -122,6 +125,7 @@ function createMarkers(places) {
   var bounds = new google.maps.LatLngBounds();
   var place; 
 
+
   for (var i = 0; place = places[i]; i++) {
 
     // set marker image and dimensions 
@@ -142,7 +146,7 @@ function createMarkers(places) {
       position: place.geometry.location
     });  
     
-    // push all markers in an array for backward event binding
+    // push all markers in an array for backward event binding or removing markers when required.
     all_markers.push({place_id:place.id, marker_obj:marker});
 
     // attach an event to the marker to show restaurant name 
